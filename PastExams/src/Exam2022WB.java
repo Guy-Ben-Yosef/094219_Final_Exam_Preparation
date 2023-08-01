@@ -1,4 +1,5 @@
 public class Exam2022WB {
+    // Question 01
     static class Foo {
         public Foo() {
             f();
@@ -32,6 +33,45 @@ public class Exam2022WB {
         public static void h() {
             System.out.println("Method h from Bar");
         }
+    }
+
+    // Question 02
+    static class Helper {
+        private int num = 0;
+        public void increase() {
+            num++;
+        }
+        public int getNum() {
+            return num;
+        }
+    }
+
+    static class Node {
+        private double info;
+        private Node next;
+        public Node(double info, Node next) {
+            this.info = info;
+            this.next = next;
+        }
+        public Node(double info) {
+            this(info, null);
+        }
+        public double getInfo() {
+            return info;
+        }
+        public Node getNext() {
+            return next;
+        }
+    }
+
+    public static double calculateSomething(Node list, Helper helper) {
+        if (list == null) {
+            return 0;
+        }
+        double value = calculateSomething(list.getNext(), helper);
+        int num = helper.getNum();
+        helper.increase();
+        return (list.getInfo() + value * num) / (num + 1);
     }
 
 }
