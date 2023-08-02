@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Exam2022WB {
     // Question 01
@@ -296,4 +294,4 @@ public class Exam2022WB {
 
     // Question 04
 
-}
+    }
